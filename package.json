@@ -1,0 +1,16 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "used to install cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "run": "node_modules/.bin/cypress open"
+  },
+  "author": "atulzh07",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^12.0.2",
+    "cypress-iframe": "^1.0.1"
+  }
+}

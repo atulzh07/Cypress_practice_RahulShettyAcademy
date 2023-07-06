@@ -1,1 +1,1 @@
-# Cypress_practice
+# Cypress_Udemy

@@ -1,0 +1,41 @@
+Required: nodejs, npm,
+
+Commands Used:
+
+1. To create a package.json file with respective details
+   npm - i init
+
+2. Install Cypress via NPM using
+   npm Install Cypress --save-dev
+
+3. Use the following command to access cypress test runner
+   node_modules/.bin/cypress open
+
+4. In the test runner, select "E2E Testing" for end to end browser automations
+   and
+   Select "Component Testing" for tests like Unit Test
+
+5. Notice that Cypress has already created a file called "cypress.config.js" in the main folder
+
+6. Click Continue, then select a browser like "Chrome"
+
+7. Right now a test runner for Chrome should be active as localhost:
+
+8. A folder called cypress is created in which there are folders like downloads, fixtures, support which automatically get created.
+
+9. Create a folder called integration inside cypress. Then create an examples folder inside integration.
+
+10. The test folder needs to be defined in the cypress.config.js file.
+    Inside e2e object, add the spec path file. Example
+    specPattern: 'cypress/integration/examples/\*.js'
+
+11. The Test Runner now scans the tests and is listed there.
+    On clicking the files, tests can be run. On the right, whole execution can be seen and on the left,
+
+12. Run a cypress test successfully in headless mode using the command
+    node_modules/.bin/cypress run
+    node_modules/.bin/cypress run -- headed [For headed test run]
+    node_modules/.bin/cypress run --browser chrome/firefox/edge [trigger the test in respective browser]
+
+13. Add the following line as header in the tests page to get cypress autosuggestions.
+    /// <reference types = "Cypress" />
