@@ -29,15 +29,13 @@ describe('Testing the products page', () => {
         products.checkoutButton().click();
         const arrayOfPrice = [];
         let sum =0;
-        const a = cy.get('tr td:nth-child(4) strong').each(($el, index, $list) => {
+        cy.get('tr td:nth-child(4) strong').each(($el, index, $list) => {
             const element = $el.text();
             const elementSplit = element.split(" ");
             const price = parseInt(elementSplit[1]);
             arrayOfPrice.push(price);
             sum = sum + price;
-        }).then(function(){
-            // cy.log(sum);
-        })
+        });
         //using a function to resolve a promise 
         cy.get('h3 strong').then(function(element){
             const finalAmount = element.text();
