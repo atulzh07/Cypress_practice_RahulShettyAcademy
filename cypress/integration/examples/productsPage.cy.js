@@ -36,8 +36,17 @@ describe('Testing the products page', () => {
             arrayOfPrice.push(price);
             sum = sum + price;
         }).then(function(){
-            cy.log(sum);
+            // cy.log(sum);
         })
+        //using a function to resolve a promise 
+        cy.get('h3 strong').then(function(element){
+            const finalAmount = element.text();
+            const split = finalAmount.split(" ");
+            const amount = split[1];
+            expect(Number(amount)).to.eql(sum); 
+        })
+
+
 
     })
 })
